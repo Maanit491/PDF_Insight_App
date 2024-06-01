@@ -1,5 +1,12 @@
 # PDF_Insight_App
 A full-stack application that allows users to upload PDF documents and ask questions regarding the content of these documents. The backend processes these documents and utilizes natural language processing to provide answers to the questions posed by the users.
+## Tools and Technologies:
+
+# Backend: FastAPI
+# NLP Processing: LLamaIndex
+# Frontend: React.js
+# Database: SQLite
+# File Storage: Local filesystem for storing uploaded PDFs
 
 # First Setup your React.js App
 
@@ -136,13 +143,14 @@ deactivate
   pip install <package_name>
   pip freeze > requirements.txt
   ```
+### API Documentation
+## Endpoints
 
-- Make sure to commit the updated `requirements.txt` file to your version control system.
+# POST /uploadfile
 
-## Troubleshooting
+This endpoint is for uploading PDF documents.
 
-If you encounter any issues, consider the following steps:
-- Ensure all dependencies are correctly listed in `requirements.txt`.
-- Check for typos in file names and paths.
-- Review the FastAPI documentation: https://fastapi.tiangolo.com/
+# POST /api/query
+
+This endpoint processes a user's query and returns a response from the NLP model.
 
