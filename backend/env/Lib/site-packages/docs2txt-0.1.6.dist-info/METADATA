@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: docs2txt
+Version: 0.1.6
+Summary: A simple program to download documentation from docs.rs and convert it into a plaintext file.
+Home-page: https://github.com/ehutzle/docs2txt
+Author: Eric Richard
+Author-email: ehutzle@gmail.com
+License: MIT license
+Keywords: docs2txt
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: click (~=8.1.4)
+Requires-Dist: requests (~=2.31.0)
+Requires-Dist: beautifulsoup4 (~=4.12.2)
+Requires-Dist: setuptools (~=68.0.0)
+Requires-Dist: rich (~=13.4.2)
+Requires-Dist: tqdm (~=4.65.0)
+
+=============
+docs2txt
+=============
+
+
+.. image:: https://img.shields.io/pypi/v/docs2txt.svg
+        :target: https://pypi.python.org/pypi/docs2txt
+
+.. image:: https://img.shields.io/travis/ehutzle/docs2txt.svg
+        :target: https://travis-ci.com/ehutzle/docs2txt
+
+.. image:: https://readthedocs.org/projects/docs2txt/badge/?version=latest
+        :target: https://docs2txt.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+A simple program to download documentation from docs.rs and convert it into a plaintext file.
+
+
+* Free software: MIT license
+* Documentation: https://docs2txt.readthedocs.io.
+
+
+Features
+--------
+
+Rust
+^^^^
+- Download documentation from docs.rs and convert it into a plaintext file.
+
+Usage
+-----
+- Create a virtual environment and install the package ``python -m venv venv``
+- Install the package with ``pip install docs2txt``
+- Activate the virtual environment
+    - OSX / Linux: ``source venv/bin/activate``
+    - Windows: ``venv\Scripts\activate``
+
+- Run the program:
+    - ``python -m docs2txt``
+
+Examples
+--------
+
+To download the documentation of the redb crate and save it to a folder on your desktop named "Rust Docs":
+
+- ``python -m docs2txt docs-rs --url https://docs.rs/redb/1.0.4/redb/ --output-dir '~/Desktop/Rust Docs'``
+
+
+
+=======
+History
+=======
+
+0.1.0 (2023-07-09)
+------------------
+
+* First release on PyPI.
+
+0.1.1 - 0.1.4 (2023-07-09)
+--------------------------
+
+* Bug Fixes
+
+0.1.5 (2023-07-09)
+------------------
+
+* Updated Readme with usage and example
+
+0.1.6 (2023-07-09)
+------------------
+
+* Added History

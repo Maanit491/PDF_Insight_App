@@ -1,0 +1,2 @@
+[console_scripts]
+docs2txt = docs2txt.cli:main
