@@ -3,7 +3,7 @@ import React from 'react';
 // import AskQuestion from './components/askquestion';
 import Header from './components/header';
 import Chatbot from './components/chatbot';
-import api from './api';
+// import api from './api';
 
 function App() {
     return (

@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.)
 
 for more information about react setup, you can refer to the "README.md" File present in the "frontend" folder of this repository.
 
-# FastAPI Application Setup Guide
+# FastAPI Application Setup Guide for backend
 
 This guide will help you set up a virtual environment and run a FastAPI application. Follow these steps to get your application up and running.
 
@@ -35,14 +35,13 @@ Make sure you have the following installed on your system:
 
 ## Steps
 
-### 1. Clone the Repository
+### 1. Open Another Terminal for running Backend
 
-First, clone the repository containing your FastAPI application. Open your terminal and run:
+Open another terminal(not the one where your react is running) and run:
 
-```sh
-git clone https://github.com/Maanit491/PDF_Insight_App.git
-cd PDF_Insight_App
-```
+`cd PDF_Insight_App`
+
+`cd backend`
 
 ### 2. Create a Virtual Environment
 
@@ -73,8 +72,10 @@ source env/bin/activate
 #### On Windows
 
 ```sh
-.\env\Scripts\activate
+.\env\Scripts\Activate.ps1
 ```
+Now you are in your environment.
+
 
 ### 4. Install Dependencies
 
@@ -83,8 +84,12 @@ Install the required dependencies using `pip`. Make sure you are in the project 
 ```sh
 pip install -r requirements.txt
 ```
+### 5.Go to the .env file in the "app" folder and add your OPENAI_API_KEY.
 
-### 5. Run the Application
+OPENAI_API_KEY="enter_your_openai_key_here"
+
+
+### 6. Run the Application
 
 Run the FastAPI application using `uvicorn`, which is an ASGI server for Python.
 
@@ -98,7 +103,7 @@ uvicorn app.main:app --reload
 
 Your application should now be running at `http://127.0.0.1:8000`.
 
-### 6. Access the Application
+### 7. Access the Application
 
 Open your web browser and go to:
 
@@ -111,7 +116,7 @@ You can also access the automatic interactive API documentation provided by Fast
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - ReDoc: `http://127.0.0.1:8000/redoc`
 
-### 7. Deactivate the Virtual Environment
+### 8. Deactivate the Virtual Environment
 
 Once you are done working on your application, you can deactivate the virtual environment by running:
 
@@ -136,3 +141,4 @@ If you encounter any issues, consider the following steps:
 - Ensure all dependencies are correctly listed in `requirements.txt`.
 - Check for typos in file names and paths.
 - Review the FastAPI documentation: https://fastapi.tiangolo.com/
+
