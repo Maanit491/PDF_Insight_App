@@ -2,11 +2,11 @@
 A full-stack application that allows users to upload PDF documents and ask questions regarding the content of these documents. The backend processes these documents and utilizes natural language processing to provide answers to the questions posed by the users.
 ## Tools and Technologies:
 
-# Backend: FastAPI
-# NLP Processing: LLamaIndex
-# Frontend: React.js
-# Database: SQLite
-# File Storage: Local filesystem for storing uploaded PDFs
+### Backend: FastAPI
+### NLP Processing: LLamaIndex
+### Frontend: React.js
+### Database: SQLite
+### File Storage: Local filesystem for storing uploaded PDFs
 
 # First Setup your React.js App
 
