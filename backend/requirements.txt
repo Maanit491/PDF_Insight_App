@@ -1,0 +1,8 @@
+python-dotenv
+llama-index
+SQLAlchemy
+fastapi
+pymupdf
+pypdf
+pydantic
+uvicorn[standard]
