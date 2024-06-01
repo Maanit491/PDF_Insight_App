@@ -1,29 +1,28 @@
 import React, { Component } from 'react';
 import '../styles/header.css';
 import groupsvg from './Group.svg';
-import Spinner from './spinner1.svg'; // Import spinner
+import Spinner from './spinner1.svg';
 
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            fileName: '', // Initialize the state for the file name
-            errorMessage: '', // State to hold error messages
-            isLoading: false // State to track loading status
+            fileName: '',
+            errorMessage: '',
+            isLoading: false 
         };
     }
 
     handleFileUpload = async (event) => {
-        const file = event.target.files[0]; // Get the selected file
-        const fileName = file ? file.name : ''; // Extract the file name
+        const file = event.target.files[0];
+        const fileName = file ? file.name : '';
 
-        // Validate file type
         if (file && file.type !== 'application/pdf') {
             this.setState({ errorMessage: 'Unsupported file type. Please upload a PDF file.', fileName: '', isLoading: false });
             return;
         }
 
-        this.setState({ fileName, errorMessage: '', isLoading: true }); // Update state with the file name and set loading state
+        this.setState({ fileName, errorMessage: '', isLoading: true }); // Updating state with the file name and set loading state
 
         event.preventDefault();
         const formData = new FormData();

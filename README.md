@@ -13,9 +13,13 @@ A full-stack application that allows users to upload PDF documents and ask quest
 
 `cd frontend`
 
-## Step 3: `npm install`
+## Step 3: Install npm
 
-## Step 4: `npm start` 
+`npm install`
+
+## Step 4: Start your application
+
+`npm start` 
 
 (Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.)

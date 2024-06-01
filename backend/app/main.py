@@ -7,7 +7,7 @@ import os
 import fitz  # PyMuPDF
 import shutil
 from datetime import datetime, timezone
-from app.nlp import initialize_query_engine  # Assuming initialize_query_engine is imported correctly
+from app.nlp import initialize_query_engine  
 from app.database import SessionLocal, engine
 from app import crud, models
 
@@ -19,10 +19,10 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 origins = [
-    'http://localhost:3000'  # Adjust origin URL if necessary
+    'http://localhost:3000' 
 ]
 
-# Enable CORS for development
+# Enabling CORS for development
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -70,7 +70,7 @@ async def upload_file(file: UploadFile = File(...), db: Session = Depends(get_db
     if file.content_type != 'application/pdf':
         return JSONResponse({"error": "Unsupported file type. Please upload a PDF file."}, status_code=400)
     
-    # Delete any existing files in the directory
+    # Deleting any existing files in the directory
     folder = 'uploaded_files'
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)
@@ -99,7 +99,7 @@ async def upload_file(file: UploadFile = File(...), db: Session = Depends(get_db
             num_pages=extraction_result["num_pages"]
         )
         
-        # Reinitialize the NLP model with the new document
+        # Reinitializing the NLP model with the new document
         global query_engine
         query_engine = initialize_query_engine()
 
@@ -116,20 +116,20 @@ async def ask(request: QueryRequest):
     print("Received query request")
     folder = 'uploaded_files'
     
-    # Check if the uploaded_files directory is empty
+    # Checking if the uploaded_files directory is empty
     if not os.listdir(folder):
         print("No files found in the uploaded_files directory")
         return JSONResponse({"error": "No files found in the uploaded_files directory."}, status_code=400)
 
-    # Check if the NLP model (query_engine) is initialized
+    # Checking if the NLP model (query_engine) is initialized
     if query_engine is None:
         print("NLP model has not been initialized")
         return JSONResponse({"error": "The NLP model has not been initialized."}, status_code=500)
 
     try:
-        # Process the user's query using your NLP model
+        # Processing the user's query using your NLP model
         print(f"Processing query: {request.question}")
-        llama_type_answer = query_engine.query(request.question)  # Ensure this returns a string or JSON serializable object
+        llama_type_answer = query_engine.query(request.question)
         answer = str(llama_type_answer)
         if answer == "Empty Response":
             print("Empty response from NLP model")

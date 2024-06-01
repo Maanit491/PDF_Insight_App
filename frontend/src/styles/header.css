@@ -14,7 +14,7 @@
 }
 
 .logo img {
-    height: 42px; /* Adjust height as needed */
+    height: 42px;
 }
 
 .file-name {
@@ -58,7 +58,6 @@
     margin-right: 10px;
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    /* color: #0FA958; */
     color: black;
 }
 
@@ -70,7 +69,7 @@ span {
 }
 
 #fileInput {
-    display: none; /* Hide the actual file input */
+    display: none;
 }
 
 .green {

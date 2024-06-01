@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import '../styles/chatbot.css';
 import axios from 'axios';
 import BotIcon from './boticon.svg';
-import Spinner from './spinner.svg'; // Add a spinner image
+import Spinner from './spinner.svg';
 
 function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // Add loading state
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleMessageSubmit = async () => {
     if (inputValue.trim() === '') return;
     setMessages([...messages, { text: inputValue, sender: 'user' }]);
     setInputValue('');
-    setIsLoading(true); // Set loading state to true
+    setIsLoading(true);
     try {
       const response = await axios.post('http://localhost:8000/api/query', { question: inputValue });
       const answer = response.data.answer;
@@ -28,7 +28,7 @@ function Chatbot() {
         { text: 'An error occurred. Please try again later.', sender: 'bot' }
       ]);
     } finally {
-      setIsLoading(false); // Set loading state to false
+      setIsLoading(false);
     }
   };
 
