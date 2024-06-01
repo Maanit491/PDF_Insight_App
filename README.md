@@ -154,3 +154,6 @@ This endpoint is for uploading PDF documents.
 
 This endpoint processes a user's query and returns a response from the NLP model.
 
+# Demo Video
+
+https://drive.google.com/file/d/16uYOjnJS9WkqqGftzMNpZJ4X0GHwhLDe/view?usp=sharing
