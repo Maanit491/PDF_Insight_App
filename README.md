@@ -3,19 +3,19 @@ A full-stack application that allows users to upload PDF documents and ask quest
 
 # First Setup your React.js App
 
-Step 1: Open git bash and Clone the repository and open the directory
+## Step 1: Open git bash and Clone the repository and open the directory
 
-git clone https://github.com/Maanit491/PDF_Insight_App.git
+`git clone https://github.com/Maanit491/PDF_Insight_App.git`
 
-cd PDF_Insight_App
+`cd PDF_Insight_App`
 
-Step2: Open your terminal in the project directory and do
+## Step2: Open your terminal in the project directory and do
 
 `cd frontend`
 
-Step 3: `npm install`
+## Step 3: `npm install`
 
-Step 4: `npm start` 
+## Step 4: `npm start` 
 
 (Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.)
