@@ -19,7 +19,8 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 origins = [
-    'http://localhost:3000' 
+    'http://localhost:3000',
+    'https://frontendpdf-retb61ah1-maanit-aroras-projects.vercel.app/'
 ]
 
 # Enabling CORS for development
